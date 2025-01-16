@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Draw Rectangles</title>
+		<style type="text/css">
+		canvas {border: 2px; outline: darkgoldenrod inset;}
+		</style>
+	</head>
+
+	<body background="img.png" onload="main()">
+		<font color="white">
+
+		<canvas id="es1" width="550" height="550">
+		Please use a browser that support "canvas"
+		</canvas>
+		
+		<div style="position:absolute; top:10px; left:600px;">
+			Scegli un colore prima della creazione del rettangolo.
+			Con il primo click imposti il vertice in alto a sinistra,
+			con il secondo imposti il vertice in basso a destra.
+			Con CTRL + Z elimini l'ultimo rettangolo inserito.
+
+		</div>
+
+		<div style="position:absolute; top:100px; left:600px;">
+			Selezione colore:
+			<form name="colore">
+				<fieldset>
+					<legend>Colori</legend>
+					<input type = "radio" name="colore" checked onclick="setColor(0)"/>Giallo<br />
+					<input type = "radio" name="colore" onclick="setColor(1)"/>Rosso<br />
+					<input type = "radio" name="colore" onclick="setColor(2)"/>Verde<br />
+					<input type = "radio" name="colore" onclick="setColor(3)"/>Azzurro<br />
+					<input type = "radio" name="colore" onclick="setColor(4)"/>Blu<br />
+					<input type = "radio" name="colore" onclick="setColor(5)"/>Fucsia<br />
+					<input type = "radio" name="colore" onclick="setColor(6)"/>Magenta<br />
+					<input type = "radio" name="colore" onclick="setColor(7)"/>Nero<br />
+					<INPUT TYPE="submit" VALUE="Restart">
+				</fieldset>
+			</form>
+		</div>
+
+		<script src="../libs/webgl-utils.js"></script>
+		<script src="../libs/webgl-debug.js"></script>
+		<script src="../libs/cuon-utils.js"></script>
+		<script src="es1.js"></script>
+		</font>
+	</body>
+</html>
